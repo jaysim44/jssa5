@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161203154037) do
+ActiveRecord::Schema.define(version: 20161203182528) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -43,6 +43,21 @@ ActiveRecord::Schema.define(version: 20161203154037) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
+  create_table "attachinary_files", force: :cascade do |t|
+    t.string   "attachinariable_type"
+    t.integer  "attachinariable_id"
+    t.string   "scope"
+    t.string   "public_id"
+    t.string   "version"
+    t.integer  "width"
+    t.integer  "height"
+    t.string   "format"
+    t.string   "resource_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["attachinariable_type", "attachinariable_id", "scope"], name: "by_scoped_parent"
+  end
+
   create_table "customers", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
@@ -55,6 +70,16 @@ ActiveRecord::Schema.define(version: 20161203154037) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.index ["province_id"], name: "index_customers_on_province_id"
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.decimal  "price",       precision: 10, scale: 2
+    t.integer  "stock"
+    t.string   "size"
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
   end
 
   create_table "provinces", force: :cascade do |t|
