@@ -1,0 +1,53 @@
+[33mcommit 9818590a026fc7c0c60c3bb86693a32430ddb101[m
+Author: Jason Sim <jasonsim@gmail.com>
+Date:   Sat Dec 3 14:07:35 2016 -0600
+
+    Added files/code for attachinary/cloudinary to work in active admin
+
+[33mcommit a88378f3cca65082515e57cd7c1f37ac206af839[m
+Author: Jason Sim <jasonsim@gmail.com>
+Date:   Sat Dec 3 12:28:18 2016 -0600
+
+    Set up attachinary and required migrations
+
+[33mcommit aa381492c8b4e5b52381c5b5e0a674d242d6861e[m
+Author: Jason Sim <jasonsim@gmail.com>
+Date:   Sat Dec 3 12:04:14 2016 -0600
+
+    Added carrierwave and cloudinary gem files. Created cloudinary config file
+
+[33mcommit 9194ac12b64243158576e91e23b5a6c9e009f887[m
+Author: Jason Sim <jasonsim@gmail.com>
+Date:   Sat Dec 3 09:42:20 2016 -0600
+
+    Removed country from customer model with migration.
+
+[33mcommit 3093693f0da10bda293b8812dd6bdef752ed155e[m
+Author: Jason Sim <jasonsim@gmail.com>
+Date:   Sat Dec 3 07:27:49 2016 -0600
+
+    Added gems and model required for activeadmin. Migrated database and seeded test data.
+
+[33mcommit a1742b50c3bc6ba6cd91b016479039fc669d0334[m
+Author: Jason Sim <jasonsim@gmail.com>
+Date:   Sat Dec 3 07:20:10 2016 -0600
+
+    Added associations and validations to customer, province, and user models
+
+[33mcommit e20f70bbcd15ea35290175d0e17ce46d69b891fd[m
+Author: Jason Sim <jasonsim@gmail.com>
+Date:   Sat Dec 3 07:14:56 2016 -0600
+
+    Generated Customer and User models
+
+[33mcommit d5e9ce68e8673cc3fed6e45a7450a2e5eceaf411[m
+Author: Jason Sim <jasonsim@gmail.com>
+Date:   Sat Dec 3 07:08:03 2016 -0600
+
+    Generated province model
+
+[33mcommit b82d7bf108d31b5923397b41741d8c52405daae0[m
+Author: Jason Sim <jasonsim@gmail.com>
+Date:   Sat Dec 3 07:03:17 2016 -0600
+
+    Initial commit

@@ -1,0 +1,4 @@
+active_admin_form_for product do |f|
+  inputs :name, :description, :price, :stock, :size, :category_id, :collection => Category.all.map { |u| [u.name.to_s, u.id]}
+  actions
+end
