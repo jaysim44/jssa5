@@ -20,3 +20,8 @@
 //= require jquery.fileupload
 //= require cloudinary/jquery.cloudinary
 //= require attachinary
+
+$(function(){ $(document).foundation(); });
+
+//= require foundation
+$(document).foundation();

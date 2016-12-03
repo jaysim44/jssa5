@@ -42,6 +42,9 @@ gem 'cloudinary'
 # Will try attachinary
 gem 'attachinary'
 
+# Foundation styling
+gem 'foundation-rails'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
