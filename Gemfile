@@ -27,14 +27,13 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
 # Three gems required for active_admin
 gem 'activeadmin', github: 'activeadmin'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 gem 'devise'
 
+# Use Capistrano for deployment
+# gem 'capistrano-rails', group: :development
 # Carrierwave and Cloudinary gems needed for image upload
 gem 'carrierwave'
 gem 'cloudinary'
@@ -44,6 +43,11 @@ gem 'attachinary'
 
 # Foundation styling
 gem 'foundation-rails'
+
+
+
+
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -1,0 +1,8 @@
+<a href="<%= product_path(product) %>">
+  <%= image_tag product.photo.url(:thumbnail) if product.photo? %>
+</a>
+<div class="col-md-12">
+  <h5><%=product.name %></h5>
+  <h5 class="text-right">Unit Price: <%= number_to_currency product.price %></span></h5>
+
+</div>
