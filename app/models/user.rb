@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   belongs_to :customer
 
+  before_save { |user| user.username = user.username.downcase }
+
   validates :username, presence: true
   validates_confirmation_of :password
 end

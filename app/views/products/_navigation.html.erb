@@ -1,0 +1,46 @@
+<div class="top-bar">
+  <div class="top-bar-left">
+    <ul class="menu">
+      <h3>JS Sporting Apparel</h3>
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu">
+      <%= render 'layouts/user_cart_text' %>
+    </ul>
+  </div>
+</div>
+<div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
+  <ul class="orbit-container">
+    <button class="orbit-previous" aria-label="previous"><span class="show-for-sr">Previous Slide</span>&#9664;</button>
+    <button class="orbit-next" aria-label="next"><span class="show-for-sr">Next Slide</span>&#9654;</button>
+    <li class="orbit-slide is-active">
+      <%= cl_image_tag("hockey-header_vhjbiv.jpg") %>
+    </li>
+    <li class="orbit-slide">
+      <%= cl_image_tag("football-header_itkdip.jpg") %>
+    </li>
+    <li class="orbit-slide">
+      <%= cl_image_tag("soccer-header_bxaavh.jpg") %>
+    </li>
+    <li class="orbit-slide">
+      <%= cl_image_tag("basketball-header_qcrbjk.jpg") %>
+    </li>
+
+  </ul>
+</div>
+<div class="row" align="center">
+  <div class="small-12 columns">
+    <p class="links">
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </p>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+<script>
+    $(document).foundation();
+</script>
