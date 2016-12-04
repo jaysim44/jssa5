@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161204134128) do
+ActiveRecord::Schema.define(version: 20161204164514) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -76,6 +76,33 @@ ActiveRecord::Schema.define(version: 20161204134128) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.index ["province_id"], name: "index_customers_on_province_id"
+  end
+
+  create_table "lineitems", force: :cascade do |t|
+    t.integer  "product_id"
+    t.integer  "order_id"
+    t.decimal  "unit_price",  precision: 10, scale: 2
+    t.integer  "quantity"
+    t.decimal  "total_price", precision: 10, scale: 2
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
+    t.index ["order_id"], name: "index_lineitems_on_order_id"
+    t.index ["product_id"], name: "index_lineitems_on_product_id"
+  end
+
+  create_table "order_statuses", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.decimal  "subtotal",        precision: 10, scale: 2
+    t.decimal  "tax",             precision: 10, scale: 2
+    t.integer  "order_status_id"
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
+    t.index ["order_status_id"], name: "index_orders_on_order_status_id"
   end
 
   create_table "products", force: :cascade do |t|
