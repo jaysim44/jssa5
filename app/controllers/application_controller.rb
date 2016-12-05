@@ -9,4 +9,10 @@ class ApplicationController < ActionController::Base
       Order.new(order_status_id: 1)
     end
   end
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.for(:sign_up) do |u|
+      u.permit(:email, :username, :password, :password_confirmation)
+    end
+  end
 end

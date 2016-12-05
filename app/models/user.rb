@@ -8,5 +8,8 @@ class User < ApplicationRecord
   before_save { |user| user.username = user.username.downcase }
 
   validates :username, presence: true
+  validates :username, uniqueness: true
+  validates :email, presence: true
+  validates :email, uniqueness: true
   validates_confirmation_of :password
 end

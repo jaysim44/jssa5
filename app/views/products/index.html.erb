@@ -1,5 +1,9 @@
-<div class="row">
-  <div class="col-xs-6 col-xs-offset-3">
-      <%= render "product_row" %>
-  </div>
+<div class="row column text-center">
+  <h4>Our Newest Products</h4>
+  <hr>
+</div>
+<div class="row small-up-2 large-up-4">
+  <% @products.each do |product| %>
+      <%= render "product_row", product: product, line_item: @line_item %>
+  <% end %>
 </div>

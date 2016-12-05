@@ -10,13 +10,12 @@ Rails.application.routes.draw do
 
   get 'carts/show'
 
-  devise_for :users
-
-
-  resources :line_items
+  resources :line_items, only: [:create, :update, :destroy], defaults: { format: 'js' }
   resource :cart, only: [:show]
   resources :charges
   resources :products
+
+  devise_for :users, :controllers => {:registrations => "registrations"}
 
 
 

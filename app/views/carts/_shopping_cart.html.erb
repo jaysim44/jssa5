@@ -9,7 +9,10 @@
 <% end %>
 <% if @line_items.size == 0 %>
     <p class="text-center">
-      There are no items in your shopping cart.  Please <%= link_to "go back", root_path %> and add some items to your cart.
+      There are no items in your shopping cart.
+    </p>
+    <p class="text-center">
+      <%= link_to "Go back", root_path %> and buy something!
     </p>
 <% else %>
     <% @line_items.each do |line_item| %>
