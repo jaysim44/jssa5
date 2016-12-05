@@ -24,3 +24,5 @@
 
 # Ignore environment variables
 .env
+
+/.idea/*
