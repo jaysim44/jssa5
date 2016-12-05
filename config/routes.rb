@@ -25,4 +25,6 @@ Rails.application.routes.draw do
 
   root 'products#index'
 
+  resources :charges, only: [:new, :create]
+
 end

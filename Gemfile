@@ -44,8 +44,9 @@ gem 'attachinary'
 # Foundation styling
 gem 'foundation-rails'
 
-
-
+# Stripe gems
+gem 'stripe'
+gem 'dotenv-rails', :groups => [:development, :test]
 
 
 
