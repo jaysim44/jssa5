@@ -4,9 +4,11 @@
 
 <%= image_tag @product.photo.url(:thumbnail) if @product.photo? %>
 <p><%=@product.name %></p>
+      <p><strong>Description: </strong><%=@product.description %></p>
+      <p><strong>Stock: </strong><%=@product.stock %></p>
 <p class="text-right"><%= number_to_currency @product.price %></p>
 <div class="input-group">
-  <%= f.number_field :quantity, value: 1, class: "form-control", min: 1 %>
+  <%= f.number_field :quantity, value: 1, class: "form-control", min: 1, max: @product.stock %>
   <div class="input-group-btn">
     <%= f.hidden_field :product_id, value: @product.id %>
     <%= f.submit "Add to Cart", class: "btn btn-primary" %>
